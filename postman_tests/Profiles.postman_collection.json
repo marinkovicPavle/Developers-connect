@@ -1,0 +1,297 @@
+{
+	"info": {
+		"_postman_id": "25025523-4145-43b9-91eb-efe4ff761b98",
+		"name": "Profiles",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Create and update profile",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					},
+					{
+						"key": "x-auth-token",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7ImlkIjoiNWYzZjg5NmU2OTcyY2YzMGE4MzJhYjIyIn0sImlhdCI6MTU5Nzk5OTQ3MCwiZXhwIjoxNTk4MzU5NDcwfQ.3xnt3Gzn4h2L1WRbVEC6r4I8Zi8NW2arz-awPAvhhyY",
+						"description": "Pavle's Token",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"company\": \"EXE\",\r\n    \"website\": \"pavlemarinkovic.com\",\r\n    \"location\": \"Sljivar\",\r\n    \"bio\": \"Developer\",\r\n    \"githubusername\": \"marinkovicPavle\",\r\n    \"facebook\": \"pavleMarinkovic\",\r\n    \"youtube\": \"pavleMarinkovic\",\r\n    \"twitter\": \"pavleMarinkovic\",\r\n    \"status\": \"Developer\",\r\n    \"skills\": \"C#, Java, PHP, Python, Ruby\"\r\n}"
+				},
+				"url": {
+					"raw": "http://localhost:5000/api/profile",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"api",
+						"profile"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get logged in users profile",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "x-auth-token",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7ImlkIjoiNWYzZjgyNWZhNGJhMTYyMWQ4YTg4N2E1In0sImlhdCI6MTU5ODAwMzAyMSwiZXhwIjoxNTk4MzYzMDIxfQ.ST5dgo0X-q_0CMmBfi-LX5c1_0k534FBgH9UZzG4Iug",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://localhost:5000/api/profile/me",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"api",
+						"profile",
+						"me"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get all profiles",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:5000/api/profile",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"api",
+						"profile"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get profile by user ID",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:5000/api/profile/user/5f3f825fa4ba1621d8a887a521313131",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"api",
+						"profile",
+						"user",
+						"5f3f825fa4ba1621d8a887a521313131"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Delete profile & user",
+			"request": {
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "x-auth-token",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7ImlkIjoiNWYzZmM2N2U3ZTc1OTkzMTZjNzJjZmQ2In0sImlhdCI6MTU5ODAxNTEwMywiZXhwIjoxNTk4Mzc1MTAzfQ.cTmNh7qjdtwt3xVgrYo4bs80hZFtX4gz22fv4RBoa0Y",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://localhost:5000/api/profile",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"api",
+						"profile"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Add experience",
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": "JSON",
+						"type": "text"
+					},
+					{
+						"key": "x-auth-token",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7ImlkIjoiNWYzZjgyNWZhNGJhMTYyMWQ4YTg4N2E1In0sImlhdCI6MTU5ODAxNzU0MiwiZXhwIjoxNTk4Mzc3NTQyfQ.t0krC-V2v_yiZNE1I4wJjVklZp3tT_ZXtOt-NMkQemo",
+						"description": "Pavle's Token",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"title\": \"Test\",\r\n    \"company\": \"Test\",\r\n    \"location\": \"No\",\r\n    \"from\": \"8-10-2010\",\r\n    \"to\": \"1-10-2011\",\r\n    \"current\": true,\r\n    \"description\": \"Working on angular\"\r\n}"
+				},
+				"url": {
+					"raw": "http://localhost:5000/api/profile/experience",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"api",
+						"profile",
+						"experience"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Add education",
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"description": "JSON",
+						"key": "Content-Type",
+						"type": "text",
+						"value": "application/json"
+					},
+					{
+						"description": "Pavle's Token",
+						"key": "x-auth-token",
+						"type": "text",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7ImlkIjoiNWYzZjgyNWZhNGJhMTYyMWQ4YTg4N2E1In0sImlhdCI6MTU5ODAxNzU0MiwiZXhwIjoxNTk4Mzc3NTQyfQ.t0krC-V2v_yiZNE1I4wJjVklZp3tT_ZXtOt-NMkQemo"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"school\": \"Tehnicka skola\",\r\n    \"degree\": \"Associates Degree\",\r\n    \"fieldofstudy\": \"Computer Science\",\r\n    \"from\": \"8-10-2009\",\r\n    \"to\": \"1-10-2011\",\r\n    \"description\": \"Got Associates in computer science\"\r\n}"
+				},
+				"url": {
+					"raw": "http://localhost:5000/api/profile/education",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"api",
+						"profile",
+						"education"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Delete profile experince",
+			"request": {
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "x-auth-token",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7ImlkIjoiNWYzZjgyNWZhNGJhMTYyMWQ4YTg4N2E1In0sImlhdCI6MTU5ODAxNzU0MiwiZXhwIjoxNTk4Mzc3NTQyfQ.t0krC-V2v_yiZNE1I4wJjVklZp3tT_ZXtOt-NMkQemo",
+						"description": "Pavle's Token",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://localhost:5000/api/profile/experience/5f3fe04a36214128fc95421c",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"api",
+						"profile",
+						"experience",
+						"5f3fe04a36214128fc95421c"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Delete profile education",
+			"request": {
+				"method": "DELETE",
+				"header": [
+					{
+						"description": "Pavle's Token",
+						"key": "x-auth-token",
+						"type": "text",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7ImlkIjoiNWYzZjgyNWZhNGJhMTYyMWQ4YTg4N2E1In0sImlhdCI6MTU5ODAxNzU0MiwiZXhwIjoxNTk4Mzc3NTQyfQ.t0krC-V2v_yiZNE1I4wJjVklZp3tT_ZXtOt-NMkQemo"
+					}
+				],
+				"url": {
+					"raw": "http://localhost:5000/api/profile/education/5f3fe3cd730c3d06dc1a3efe",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"api",
+						"profile",
+						"education",
+						"5f3fe3cd730c3d06dc1a3efe"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get Github repos",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:5000/api/profile/github/marinkovicPavle",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"api",
+						"profile",
+						"github",
+						"marinkovicPavle"
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"protocolProfileBehavior": {}
+}
