@@ -1,6 +1,0 @@
-{
-  "mongoURI": "mongodb+srv://pavle019:1majmun2@webapp.zptl2.mongodb.net/WebApp?retryWrites=true&w=majority",
-  "jwtSecret": "secrettoken",
-  "githubClientId": "6532b0567315e254f801",
-  "githubSecret": "514cd6905b8b5c2494892e704e7dcf82ff3c95f7"
-}
